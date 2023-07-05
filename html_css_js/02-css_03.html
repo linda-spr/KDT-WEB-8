@@ -30,12 +30,24 @@
         line-height: 200px;
         background-color: yellow;
       }
+      button {
+        border: 1px solid black;
+        background-color: white;
+      }
+
+      button:hover {
+        border: 1px solid transparent;
+        background-color: orange;
+      }
     </style>
   </head>
-  <body>
+  <body style="margin: 0">
+    <!-- line-height -->
     <div class="box">
       <p>text</p>
     </div>
+
+    <!-- font-family -->
     <p class="google">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo at quas vel
       molestias reiciendis repellendus consequatur tenetur officia corporis
@@ -48,5 +60,39 @@
       velit sit nostrum corrupti consectetur inventore magnam, voluptatum
       laborum, deleniti quod!
     </p>
+
+    <!-- inline & block -->
+    <span style="background-color: yellow; width: 100px"><div>Hello</div></span>
+    <span style="background-color: yellow">World</span>
+
+    <div style="background-color: orange; width: 100px; display: inline-block">
+      <div>Hello</div>
+    </div>
+    <div style="background-color: red; display: inline-block; width: 200px">
+      world
+    </div>
+
+    <!-- margin: auto -->
+    <div
+      style="width: 200px; height: 200px; background-color: blue; margin: auto"
+    ></div>
+
+    <!-- width & height -->
+    <div style="background-color: aqua; width: 100vw; height: 100px"></div>
+
+    <!-- max-width & max-height & min-width & min-height -->
+    <div
+      style="
+        background-color: orange;
+        width: Calc(30vw - 100px);
+        height: 30vw;
+        max-width: 300px;
+        min-width: 200px;
+      "
+    ></div>
+
+    <!-- border -->
+    <button>버튼</button>
+    <div style="border: 2px solid black; width: 200px; height: 200px"></div>
   </body>
 </html>
