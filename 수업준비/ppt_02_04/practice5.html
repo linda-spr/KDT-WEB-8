@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <style>
+      .container {
+        background-color: yellow;
+        width: 500px;
+        height: 500px;
+        display: flex;
+        /* 끝점을 기준으로 쌓이도록 */
+        /* flex-direction: row-reverse; */
+        /* 세로 방향으로 쌓이도록 */
+        flex-direction: column;
+      }
+      .container div {
+        width: 100px;
+        height: 100px;
+      }
+      .item1 {
+        background-color: pink;
+      }
+      .item2 {
+        background-color: skyblue;
+      }
+      .item3 {
+        background-color: lime;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item1">item1</div>
+      <div class="item2">item2</div>
+      <div class="item3">item3</div>
+    </div>
+  </body>
+</html>
