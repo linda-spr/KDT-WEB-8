@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      let months = ["M", "T", "W", "T", "F", "S", "S"];
+
+      months.push("Z"); // 마지막 요소 추가
+      console.log("months.push Z : ", months);
+
+      months.pop(); // 마지막 요소 삭제
+      console.log("months.pop : ", months);
+
+      months.unshift("A"); // 맨 앞에 요소 추가
+      console.log("months.unshift A : ", months);
+
+      months.shift(); // 맨 앞 요소 삭제
+      console.log("months.shift : ", months);
+
+      console.log("months.includes S : ", months.includes("S"));
+      console.log("months.includes B : ", months.includes("B"));
+
+      console.log("length : ", months.length);
+
+      console.log("indexOf T : ", months.indexOf("T"));
+      console.log("indexOf Z : ", months.indexOf("Z"));
+
+      console.log("reverse : ", months.reverse());
+
+      console.log("join : ", months.join());
+    </script>
+  </head>
+  <body></body>
+</html>
