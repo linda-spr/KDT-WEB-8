@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      const msg = "안녕하세요";
+      const name = "길동";
+
+      // 안녕하세요 길동님
+      console.log(msg);
+      console.log(name);
+      console.log("님");
+
+      console.log(msg + name + "님");
+      // + : 변수를 문자로 변환 후 출력
+
+      console.log(msg, name, "님");
+
+      console.log(`${msg} ${name}님`);
+      // 백틱 : (`) 문자를 쓰다가 변수를 쓸 수 있어요.
+
+      console.log("---------------------");
+      let colors = ["red", "orange", "yellow", "green"];
+      console.log(colors);
+      // 색상 : Array
+      console.log("색상 : " + colors);
+      console.log("색상 : ", colors);
+      console.log(`색상 : ${colors}`);
+
+      let list = [1, 2, 3, 4, 5, 6];
+      console.log(list[1]); // 2
+      console.log(list.length);
+
+      list.push(7);
+      console.log(list);
+
+      list.pop();
+      console.log(list);
+
+      let colors2 = [
+        "red",
+        "orange",
+        "yellow",
+        "green",
+        "blue",
+        "navy",
+        "purple",
+      ];
+      colors2.push("black");
+      console.log(colors2);
+      console.log(colors2.indexOf("white"));
+      console.log(colors2.reverse());
+
+      console.log(`${typeof 1} 은`);
+
+      //   let mathScore = prompt("수학 점수를 입력하세요.");
+      //   let engScore = prompt("영어 점수를 입력하세요");
+      //   let avg = (mathScore + engScore) / 2;
+      //   console.log(avg);
+
+      console.log("형변환");
+      let num = 456;
+      console.log(typeof num); // number
+      let num1 = String(num);
+      console.log(typeof num1); // string
+      let num2 = num.toString();
+      console.log(typeof num2); // string
+
+      console.log(typeof num);
+      // String() toString() 의 차이?
+
+      console.log(1 == "1");
+      console.log(1 === "1");
+      console.log(1 != "a");
+
+      console.log(3 % 2);
+      console.log(3 ** 2);
+
+      let cnt = 0;
+      cnt = cnt + 1;
+      cnt++;
+
+      cnt = cnt - 1;
+      cnt--;
+    </script>
+  </head>
+  <body></body>
+</html>
