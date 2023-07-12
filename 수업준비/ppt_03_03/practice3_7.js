@@ -8,6 +8,12 @@ function solution(num) {
 
 // 실습 4
 function solution(n) {
+  // 방법 1
+  for (let i = 1; i <= n; i++) {
+    if (i % 2 === 0) answer += "박";
+    else answer += "수";
+  }
+  // 방법2
   let repeatNum = parseInt(n / 2);
   var answer = "수박".repeat(repeatNum);
 
@@ -31,11 +37,18 @@ function solution(n) {
 function solution(n) {
   var answer = 0;
 
+  // 방법 1
   let arr = String(n).split("");
-  console.log(arr);
   arr.forEach((a) => {
     answer += parseInt(a);
   });
+
+  // 방법2
+  while (n >= 10) {
+    answer += n % 10;
+    n = parseInt(n / 10);
+  }
+  answer += n;
 
   return answer;
 }
