@@ -1,12 +1,14 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
     <script
-      type="text/javascript"
-      src="https://code.jquery.com/jquery-3.5.0.min.js"
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
     ></script>
-
-    <title>내 스케줄</title>
 
     <style>
       td {
@@ -14,25 +16,23 @@
         height: 100px;
         color: black;
       }
-      tr > td:first-child > p,
-      tr > th:first-child > p {
+
+      tr > td:first-child {
         color: red;
       }
-      tr > td:last-child > p,
-      tr > th:last-child > p {
+      tr > td:last-child {
         color: blue;
       }
-      td > p:hover {
+      td:hover {
         cursor: pointer;
       }
     </style>
   </head>
-
   <body>
     <div>
       날짜 : <input type="text" id="date" readonly /> <br />
       내용 : <input type="text" id="content" /> <br />
-      <button type="button" onclick="writeSchedule();">작성</button> <br />
+      <button type="button">작성</button> <br />
     </div>
     <div style="font-size: 2em; color: green; text-align: center">
       2022년 7월
@@ -103,25 +103,24 @@
         <td><p></p></td>
         <td><p></p></td>
         <td><p></p></td>
-        <td><p></p></td>
+        <td></td>
       </tr>
     </table>
 
     <script>
-      var target;
-      $("td > p").on("click", function (obj) {
-        $("#date").val("");
-        $("#content").val("");
+      let target = null;
 
-        target = this;
-        $("#date").val($(this).text());
+      $("td").on("click", function (e) {
+        target = e.currentTarget; // <td></td> == this
+        let value = $(target).text();
+        $("#date").val(value);
       });
 
-      function writeSchedule() {
-        var content = $("#content").val();
+      $("button").on("click", function (e) {
+        let content = $("#content").val();
 
-        $(target.parentNode).append("<span>" + content + "</span><br />");
-      }
+        $(target).append(content);
+      });
     </script>
   </body>
 </html>
