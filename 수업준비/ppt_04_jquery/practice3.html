@@ -23,7 +23,6 @@
         color: blue;
       }
       td > p:hover {
-        transform: scale(1.2);
         cursor: pointer;
       }
     </style>
@@ -113,10 +112,12 @@
       $("td > p").on("click", function (obj) {
         $("#date").val("");
         $("#content").val("");
-        console.log(obj);
-        target = obj.currentTarget; // 현재 선택한 태그 target 변수에 담기 지금, td가 console.log로 나온다.
-        console.log(target);
-        $("#date").val($(obj.currentTarget).text());
+
+        // target = obj.currentTarget; // 현재 선택한 태그 target 변수에 담기 지금, td가 console.log로 나온다.
+        // $("#date").val($(target).text());
+
+        console.log(this);
+        $("#date").val($(this).text());
         // alert( $(obj.currentTarget).text() );
       });
 
@@ -124,7 +125,7 @@
         // 이 함수를 채워주세요.
         var content = $("#content").val();
 
-        $(target.parentNode).append("<p>" + content + "</p>");
+        $(target.parentNode).append("<span>" + content + "</span><br />");
 
         // var ps = document.querySelectorAll("p");
         // for ( var i = 0; i < ps.length; i++ ){
