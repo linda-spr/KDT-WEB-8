@@ -116,7 +116,7 @@
         // target = obj.currentTarget; // 현재 선택한 태그 target 변수에 담기 지금, td가 console.log로 나온다.
         // $("#date").val($(target).text());
 
-        console.log(this);
+        target = this;
         $("#date").val($(this).text());
         // alert( $(obj.currentTarget).text() );
       });
